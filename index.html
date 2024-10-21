@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zumix Executor</title>
     <link rel="shortcut icon" href="logo.png">
     <style>
         body {
@@ -12,48 +11,25 @@
             background-color: #D3D3D3; /* Gray background */
             color: #000000;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: flex-start;
             height: 100vh;
-            transition: background-color 0.3s ease;
         }
-        h1 {
-            margin-bottom: 20px;
-            font-size: 2.5em;
-            text-align: center;
-        }
-        p {
-            margin: 10px 0;
-            font-size: 1.2em;
-            text-align: center;
-            max-width: 600px;
-        }
-        .discord-button {
-            padding: 15px 30px;
-            background-color: #000000;
-            color: #ffffff;
-            margin-top: 15px;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 1.2em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            text-decoration: none;
-        }
-        /* Styling for the code area with line numbers */
+        /* Fullscreen pre box */
         pre {
             background-color: #2d2d2d;
             color: #f8f8f2;
             padding: 20px;
             overflow: auto;
             border-radius: 5px;
-            position: relative;
-            max-width: 600px;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            box-sizing: border-box;
         }
         pre code {
             display: block;
-            white-space: pre-wrap;
+            white-space: pre-wrap; /* Allow text wrapping */
             counter-reset: line;
         }
         pre code span {
@@ -64,7 +40,7 @@
         }
         pre code span::before {
             counter-increment: line;
-            content: counter(line);
+            content: counter(line); /* Line number */
             position: absolute;
             left: 0;
             color: #888888;
@@ -75,10 +51,11 @@
     </style>
 </head>
 <body>
-    <h1>Zumix Executor</h1>
     <pre><code>
 <span>Created by @ ytz_solar on Discord</span>
 <span>-- Don't forget to join https://discord.gg/3SdU5hsAyJ</span>
+<span>Some additional text to show how wrapping and lines work.</span>
+<span>This line is very long, so it should wrap around to the next line in most browser window sizes, and the line numbers will adjust accordingly.</span>
     </code></pre>
 </body>
 </html>
